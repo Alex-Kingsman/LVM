@@ -201,22 +201,22 @@ Writing inode tables: done
 Creating journal (16384 blocks): done
 Writing superblocks and filesystem accounting information: done
 
-root@ubuntuserver:~# mount /dev/ubuntu-vg/LogVol_Home /mnt/
+ mount /dev/ubuntu-vg/LogVol_Home /mnt/
 
-root@ubuntuserver:~# cp -aR /home/* /mnt/
+cp -aR /home/* /mnt/
 
-root@ubuntuserver:~# rm -rf /home/*
+rm -rf /home/*
 
-root@ubuntuserver:~# umount /mnt
+umount /mnt
 
-root@ubuntuserver:~# mount /dev/ubuntu-vg/LogVol_Home /home/
+mount /dev/ubuntu-vg/LogVol_Home /home/
 
-root@ubuntuserver:~# echo "`blkid | grep Home | awk '{print $2}'` \
+echo "`blkid | grep Home | awk '{print $2}'` \
  /home xfs defaults 0 0" >> /etc/fstab
 
  touch /home/file{1..20}
  
-root@ubuntuserver:~# lvcreate -L 100MB -s -n home_snap \
+lvcreate -L 100MB -s -n home_snap \
  /dev/ubuntu-vg/LogVol_Home
   Logical volume "home_snap" created.
 
