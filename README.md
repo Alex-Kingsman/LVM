@@ -3,7 +3,7 @@
 
 Создаем pv
 
-~$ alex@ubuntuserver:~$ sudo pvcreate /dev/sdb
+sudo pvcreate /dev/sdb
 
   Physical volume "/dev/sdb" successfully created.
   
