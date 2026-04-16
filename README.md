@@ -2,10 +2,14 @@
 Уменьшить том под / до 8G
 
 Создаем pv
+
 ~$ alex@ubuntuserver:~$ sudo pvcreate /dev/sdb
+
   Physical volume "/dev/sdb" successfully created.
+  
 
 alex@ubuntuserver:~$ sudo vgcreate vg_root /dev/sdb
+
   Volume group "vg_root" successfully created
 
 
