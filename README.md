@@ -137,7 +137,7 @@ update-initramfs -u
 update-initramfs: Generating /boot/initrd.img-6.18.20-061820-generic
 W: Couldn't identify type of root file system for fsck hook
 
-root@ubuntuserver:/# pvcreate /dev/sdc /dev/sdd
+pvcreate /dev/sdc /dev/sdd
 
   Physical volume "/dev/sdc" successfully created.
   Physical volume "/dev/sdd" successfully created.
@@ -188,7 +188,7 @@ lvcreate -n LogVol_Home -L 2G /dev/ubuntu-vg
 
   Logical volume "LogVol_Home" created.
 
-root@ubuntuserver:~# mkfs.ext4 /dev/ubuntu-vg/LogVol_Home
+ mkfs.ext4 /dev/ubuntu-vg/LogVol_Home
 
 mke2fs 1.47.0 (5-Feb-2023)
 Creating filesystem with 524288 4k blocks and 131072 inodes
@@ -201,7 +201,7 @@ Writing inode tables: done
 Creating journal (16384 blocks): done
 Writing superblocks and filesystem accounting information: done
 
- mount /dev/ubuntu-vg/LogVol_Home /mnt/
+mount /dev/ubuntu-vg/LogVol_Home /mnt/
 
 cp -aR /home/* /mnt/
 
